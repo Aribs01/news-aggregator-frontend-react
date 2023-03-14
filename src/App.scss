@@ -1,0 +1,71 @@
+:root {
+  --text: #272343;
+  --background:#fffffe;
+  --transition: 0.4s;
+  --side-padding: 5rem;
+}
+
+.light-theme {
+  --text: #272343;
+  --background:#fffffe;
+  --transition: 0.4s;
+  --side-padding: 5rem;
+}
+
+.dark-theme {
+  --text: #fffffe;
+  --background:#272343;
+  --transition: 0.4s;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  cursor: pointer;
+  transition-duration: 0.4s;
+  padding: 0.4375rem 0.625rem;
+}
+
+a {
+  text-decoration: none;
+  color: 1px solid var(--text) !important;
+}
+
+ol, ul {
+  padding: 0;
+}
+
+
+@media (max-width: 991px) {
+
+}
+
+@media (max-width: 768px) {
+  :root {
+    --text: #272343;
+    --background:#fffffe;
+    --transition: 0.4s;
+    --side-padding: 1rem;
+  }
+  
+  .dark-theme {
+    --text: #fffffe;
+    --background:#272343;
+    --transition: 0.4s;
+    --side-padding: 1rem;
+  }
+}
+
+@media (max-width: 577px) {
+
+}
+
