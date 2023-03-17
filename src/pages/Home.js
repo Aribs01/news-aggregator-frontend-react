@@ -49,9 +49,7 @@ class Home extends React.Component {
   }
 
   render() {
-    const { items } = this.state;
-    const { items2 } = this.state;
-    const { items3 } = this.state;
+    const { items, items2, items3 } = this.state;
 
     return (
       <div id='home'>
@@ -136,11 +134,11 @@ class Home extends React.Component {
             items3.map((item) => (
               <News
                 key={item?.title}
-                image={item?.multimedia[0]?.url}
+                image={(item.multimedia && item.multimedia[0]) ? item?.multimedia[0].url : ''}
                 title={item?.title}
                 tag={item?.section}
-                description={item.abstract}
-                link={item.url}
+                description={item?.abstract}
+                link={item?.url}
               />
             ))
           }

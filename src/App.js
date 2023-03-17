@@ -6,6 +6,8 @@ import TopbarComponent from './component/TopbarComponent';
 
 import Home from './pages/Home';
 import './App.scss';
+import SavedNewsPage from './pages/SavedNewsPage';
+import Appauth from './component/Appauth';
 
 function App() {
   return (
@@ -14,6 +16,9 @@ function App() {
       <div className="App">
         <Routes>
           <Route path='/' exact element={<Home />} />
+          <Route element={<Appauth />}>
+            <Route path='/for-me' element={<SavedNewsPage />} />
+          </Route>
         </Routes>
       </div>
       {/* <FooterComponent /> */}
